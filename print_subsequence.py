@@ -8,7 +8,7 @@ class Solution:
             return [result.copy()]
         result.append(nums[index])
         left = self.get_subsequence(nums, index + 1, result)
-        result.remove(nums[index])
+        result.pop()
         right = self.get_subsequence(nums, index + 1, result)
         return left + right
 
